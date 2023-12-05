@@ -835,3 +835,9 @@ ol, ul {
 	overflow:hidden;
 	font-size: 13px;
 }
+@media screen and (max-width:600px) {
+
+        .zf-templateWidth {
+            width: 100%;
+        }
+    }
