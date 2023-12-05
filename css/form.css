@@ -653,7 +653,7 @@ ul {
 
 .zf-fmFooter {
   margin: 0;
-  padding: 25px;
+  /* padding: 25px; */
   text-align: center;
 }
 
@@ -1233,7 +1233,7 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   /* max-height: 2100px; */
-  height: 836px !important;
+  height: 813px !important;
 }
 
 .zf-tempContDiv input[type="text"],
@@ -1695,7 +1695,7 @@ ul {
 
 .zf-fmFooter {
   margin: 0;
-  padding: 25px;
+  /* padding: 25px; */
   text-align: center;
 }
 
@@ -1715,7 +1715,7 @@ ul {
   border-radius: 0px !important;
   cursor: pointer;
   padding: 10px 5px;
-  margin: 10px 5px 10px 0px;
+  margin: 10px 17px 10px 0px;
   float: right;
   background-color: black !important;
 }
@@ -2576,6 +2576,7 @@ label {
   }
   .zf-templateWrapper {
     padding: 0px 10px 0 10px;
+    height: 852px !important;
   }
 }
 @media (max-width: 420px) {
@@ -2597,4 +2598,9 @@ form select,
 form textarea {
   display: inline-block !important;
   width: 100% !important;
+}
+
+ol,
+ul {
+  margin: 0px !important;
 }
