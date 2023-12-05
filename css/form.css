@@ -438,7 +438,7 @@ ul {
 }
 .zf-address .zf-tempContDiv span.zf-addtwo,
 .zf-geolocation .zf-tempContDiv span.zf-addtwo {
-  width: 48%;
+  width: 100%;
 }
 .zf-address .zf-tempContDiv span.zf-addtwo input,
 .zf-geolocation .zf-tempContDiv span.zf-addtwo input {
