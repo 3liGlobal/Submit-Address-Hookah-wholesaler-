@@ -1229,11 +1229,11 @@ ul {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 0px 80px 0 80px;
+  padding: 40px 80px;
   max-width: 1200px;
   margin: 0 auto;
-  /* max-height: 2100px; */
-  height: 813px !important;
+  min-height: 100px;
+  overflow: hidden;
 }
 
 .zf-tempContDiv input[type="text"],
