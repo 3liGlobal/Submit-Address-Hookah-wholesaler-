@@ -1232,8 +1232,8 @@ ul {
   padding: 40px 80px;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: 100px;
-  overflow: hidden;
+  min-height: 100px !important;
+  overflow: hidden !important;
 }
 
 .zf-tempContDiv input[type="text"],
