@@ -177,7 +177,7 @@ ul {
 }
 
 .zf-templateWidth {
-  width: 800px;
+  width: 1200px;
 }
 
 .zf-templateWrapper {
@@ -1230,7 +1230,7 @@ ul {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 40px 80px;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   min-height: 100px !important;
   overflow: hidden !important;
@@ -1340,7 +1340,7 @@ ul {
 }
 
 .zf-tempFrmWrapper {
-  padding: 10px 7px;
+  padding: 10px 0px;
   margin: 1px 0;
 }
 
@@ -2210,7 +2210,7 @@ form input[type="tel"],
 form input[type="text"],
 form select,
 form textarea {
-  display: inline-block !important;
+  display: inline-block;
   width: 100% !important;
 }
 
@@ -2294,6 +2294,7 @@ p {
   border-color: transparent;
   border-left-color: #d378ff;
   border-right-color: #9b2269;
+  border: none !important;
 }
 
 #form .action-button-previous {
@@ -2312,6 +2313,7 @@ p {
 #form .action-button-previous:hover,
 #form .action-button-previous:focus {
   background-color: #000000;
+  border: none;
 }
 
 .card {
@@ -2595,11 +2597,27 @@ form input[type="tel"],
 form input[type="text"],
 form select,
 form textarea {
-  display: inline-block !important;
+  display: inline-block;
   width: 100% !important;
 }
 
 ol,
 ul {
   margin: 0px !important;
+}
+
+.zf-phone .zf-tempContDiv label,
+.zf-date .zf-tempContDiv label,
+.zf-time .zf-tempContDiv label,
+.zf-address .zf-tempContDiv label,
+.zf-name .zf-tempContDiv span label {
+  color: #888888;
+  padding-bottom: 8px;
+}
+
+.mandatory {
+  font-size: 22px;
+  color: black;
+  text-align: center;
+  margin-top: 28px;
 }
