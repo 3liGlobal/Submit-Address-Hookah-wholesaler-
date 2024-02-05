@@ -8,6 +8,14 @@
 	<script src="js/validation.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<style>
+		.state-dropdown,
+		.state-text,
+		.city-text,
+		.zip-text {
+			display: none;
+		}
+	</style>
 </head>
 
 <body class="zf-backgroundBg">
@@ -39,9 +47,10 @@
 				<div class="zf-subContWrap zf-topAlign">
 					<ul>
 						<!---------Email Starts Here---------->
-						<li class="zf-tempFrmWrapper zf-small"><label class="zf-labelName">
+						<li class="zf-tempFrmWrapper zf-small">
+							<label class="zf-labelName">
 								Email.
-							<em class="zf-important">*</em>
+								<em class="zf-important">*</em>
 							</label>
 							<div class="zf-tempContDiv">
 								<span> <input fieldType=9 type="text" maxlength="255" name="Email" checktype="c5"
@@ -50,8 +59,10 @@
 							</div>
 							<div class="zf-clearBoth"></div>
 						</li><!---------Email Ends Here---------->
+
 						<!---------Dropdown Starts Here---------->
-						<li class="zf-tempFrmWrapper zf-large"><label class="zf-labelName">
+						<li class="zf-tempFrmWrapper zf-large">
+							<label class="zf-labelName">
 								Type
 							</label>
 							<div class="zf-tempContDiv">
@@ -66,69 +77,103 @@
 						</li><!---------Dropdown Ends Here---------->
 						<!--address-->
 						<!---------Address Starts Here---------->
-						<li class="zf-tempFrmWrapper zf-address zf-addrlarge "><label class="zf-labelName">
-								New Address
-								<em class="zf-important">*</em>
-							</label>
+						<li class="zf-tempFrmWrapper zf-address zf-addrlarge ">
 							<div class="zf-tempContDiv zf-address">
 								<div class="zf-addrCont">
-									<span class="zf-addOne"> <input type="text" maxlength="255"
-											name="Address_AddressLine1" checktype="c1" placeholder="" />
-										<label>Street Address</label>
-									</span>
-									<span class="zf-addOne"> <input type="text" maxlength="255"
-											name="Address_AddressLine2" checktype="c1" placeholder="" />
-										<label>Unit/Flat/Apartment No.</label>
-									</span>
 									<div class="name-item-2">
-										<span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255"
-												name="Address_City" checktype="c1" placeholder="" />
-											<label>City
+										<span class="zf-flLeft zf-addtwo">
+											<label>Country
 												<em class="zf-important">*</em>
 											</label>
+											<select class="zf-form-sBox dropdown-countries" name="Address_Country"
+												checktype="c1">
+												<!-- <option value="-Select-" selected="selected">-Select-</option> -->
+												<option value="" selected="selected" disabled>Select Country</option>
+
+											</select>
 										</span>
 										<span class="zf-flLeft zf-addtwo">
+											<label>State/Region/Province
+												<em class="zf-important star">*</em>
+											</label>
 											<select class="Address_Region state-dropdown" name="Address_Region"
 												checktype="c1" placeholder="">
-												<option value="" selected="selected">Select State</option>
+												<option value="" selected="selected" disabled>Select State</option>
 											</select>
 											<input type="text" class="Address_Region state-text"
 												placeholder="Enter state">
 
 											<!-- <input type="text" maxlength="255" name="Address_Region" checktype="c1"
 												placeholder="" /> -->
-											<label>State/Region/Province
-												<em class="zf-important star">*</em>
-											</label>
 										</span>
 									</div>
+
 									<div class="name-item-2">
-										<span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255"
-												name="Address_ZipCode" checktype="c1" placeholder="" />
+										<span class="zf-flLeft zf-addtwo">
+											<label>City
+												<em class="zf-important">*</em>
+											</label>
+											<select class="Address_City city-dropdown" id="city" checktype="c1"
+												placeholder="" disabled>
+												<option value="" selected="selected">Select City</option>
+											</select>
+											<input type="text" class="Address_City city-text" name="Address_City"
+												maxlength="255" placeholder="" autocomplete="off" />
+
+										</span>
+										<span class="zf-flLeft zf-addtwo disabled">
 											<label>Postal / Zip Code
 												<em class="zf-important">*</em>
 											</label>
-										</span>
-										<span class="zf-flLeft zf-addtwo">
-											<select class="zf-form-sBox dropdown-countries" name="Address_Country"
-												checktype="c1">
-												<!-- <option value="-Select-" selected="selected">-Select-</option> -->
-												<option value="" selected="selected">Select Country</option>
-
+											<select class="Address_ZipCode zip-dropdown" id="postalCode" checktype="c1"
+												placeholder="" disabled>
+												<option value="" selected="selected">Select Zip</option>
 											</select>
-											<label>Country
+											<input type="text" maxlength="255" placeholder="" name="Address_ZipCode"
+												id="postalCode" class="Address_ZipCode zip-text" autocomplete="off" />
+
+										</span>
+									</div>
+
+									<div class="name-item-2">
+										<span class="zf-addOne">
+											<label>County
 												<em class="zf-important">*</em>
 											</label>
+											<input type="text" maxlength="255" name="SingleLine1" checktype="c1"
+												placeholder="" class="county" id="county" autocomplete="off" />
+											<p id="SingleLine1_error" class="zf-errorMessage" style="display:none;">
+												Invalid value</p>
+										</span>
+										<span class="zf-addOne">
+											<label>Suite/Unit/Apt. Number
+												<em class="zf-important">*</em>
+											</label>
+											<input type="text" maxlength="255" name="Address_AddressLine2"
+												checktype="c1" placeholder="" autocomplete="off" />
 										</span>
 									</div>
 
 									<div class="zf-clearBoth"></div>
-									<p id="Address_error" class="zf-errorMessage" style="display:none;">Invalid value
+									<p id="Address_error" class="zf-errorMessage" style="display:none;">Invalid
+										value
 									</p>
 								</div>
 							</div>
 							<div class="zf-eclearBoth"></div>
 						</li><!---------Address Ends Here---------->
+
+						<!---------Street Starts Here---------->
+						<li class="zf-tempFrmWrapper zf-large">
+							<label class="zf-labelName">Street Address</label>
+							<div class="zf-tempContDiv">
+								<span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine1"
+										checktype="c1" placeholder="" />
+								</span>
+								<p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+							</div>
+							<div class="zf-clearBoth"></div>
+						</li><!---------Street Ends Here---------->
 					</ul>
 
 
@@ -144,7 +189,7 @@
 	</div><!-- 'zf-templateWidth' ends -->
 	<script type="text/javascript">var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
 		// var zf_MandArray = ["Address_AddressLine1", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country"];
-		var zf_FieldArray = ["Email", "Dropdown", "Address_AddressLine1", "Address_AddressLine2", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country"];
+		var zf_FieldArray = ["Email", "Dropdown", "Address_AddressLine1", "Address_AddressLine2", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country", "SingleLine1"];
 		var isSalesIQIntegrationEnabled = false;
 		var salesIQFieldsArray = [];
 	</script>
