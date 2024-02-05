@@ -152492,6 +152492,7 @@ window.onload = function () {
   // Handle change event on country dropdown
   countySel.onchange = function () {
     cityDropdown.length = 1;
+    zipDropdown.length = 1;
     zipDropdown.disabled = true;
     cityDropdown.disabled = true;
     updateStateDropdown();
@@ -152551,6 +152552,8 @@ window.onload = function () {
 
       cityDropdown.length = 1;
       cityDropdown.disabled = true;
+      cityDropdown.length = 1;
+      zipDropdown.disabled = true;
     }
   }
 
@@ -152572,8 +152575,8 @@ window.onload = function () {
     countyInput.readOnly = true;
 
     // Clear existing options
-    cityDropdown.innerHTML = '<option value="" disabled>Select City</option>'; // Reset to default option
-    zipDropdown.innerHTML = '<option value="" disabled>Select Zip code</option>'; // Reset to default option
+    cityDropdown.innerHTML = '<option value="">Select City</option>'; // Reset to default option
+    zipDropdown.innerHTML = '<option value="">Select Zip code</option>'; // Reset to default option
 
     cityText.value = "";
     zipText.value = "";
@@ -152621,7 +152624,7 @@ window.onload = function () {
 
     zipDropdown.disabled = true;
     countyInput.readOnly = true;
-
+    zipDropdown.innerHTML = '<option value="" disabled>Select Zip code</option>'; // Reset to default option
     zipText.value = "";
     countyInput.value = "";
 
@@ -152638,7 +152641,7 @@ window.onload = function () {
 
       zipDropdown.style.display = "block";
       zipText.style.display = "none";
-      zipDropdown.innerHTML = '<option value="" disabled>Select Zip Code</option>';
+      zipDropdown.innerHTML = '<option value="">Select Zip Code</option>';
       zipDropdown.disabled = false;
       const sortedZipCode = Array.from(uniqueZipCode).sort();
       sortedZipCode.forEach((zipcode) => {
