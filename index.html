@@ -24,8 +24,8 @@
 	<div class="zf-templateWidth">
 		<form
 			action='https://forms.zohopublic.com/airglobal/form/SubmitAddressHookahwholesaler/formperma/ysph0y-C4sVB2Xyc78ft8DO3L_-1fA-DE-1nAsLsSd4/htmlRecords/submit'
-			name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
-			accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input type="hidden" name="zf_referrer_name"
+			name='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input
+				type="hidden" name="zf_referrer_name"
 				value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
 			<input type="hidden" name="zf_redirect_url"
 				value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
@@ -50,12 +50,12 @@
 						<!---------Email Starts Here---------->
 						<li class="zf-tempFrmWrapper zf-small">
 							<label class="zf-labelName">
-								Email.
+								Email
 								<em class="zf-important">*</em>
 							</label>
 							<div class="zf-tempContDiv">
 								<span> <input fieldType=9 type="text" maxlength="255" name="Email" checktype="c5"
-										value="" placeholder="" /></span>
+										value="" placeholder="" id="Email" /></span>
 								<p id="Email_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
 							</div>
 							<div class="zf-clearBoth"></div>
@@ -215,7 +215,8 @@
 
 				</div><!---------template Container Starts Here---------->
 				<ul>
-					<li class="zf-fmFooter"><button class="zf-submitColor">Submit</button></li>
+					<li class="zf-fmFooter"><button class="zf-submitColor" type="button">Submit</button>
+					</li>
 				</ul>
 
 			</div><!-- 'zf-templateWrapper' ends -->
@@ -305,6 +306,15 @@
 				});
 			});
 		}
+
+	</script>
+	<script>
+		$(".zf-submitColor").click(async function (event) {
+			event.preventDefault();
+			if (zf_ValidateAndSubmit() && await validate_Email()) {
+				$("#form").submit();
+			}
+		});
 
 	</script>
 </body>
