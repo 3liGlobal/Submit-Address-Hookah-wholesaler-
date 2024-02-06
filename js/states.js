@@ -351,8 +351,11 @@ var original_zf_MandArray = [
   "Address_Region",
   "Address_ZipCode",
   "SingleLine1",
-  "Address_Country",
+  "Address_Country"
 ];
+//,
+//  "PhoneNumber_countrycode",
+//  "FileUpload",
 
 let zip_city_state = [
   {
@@ -152624,7 +152627,8 @@ window.onload = function () {
 
     zipDropdown.disabled = true;
     countyInput.readOnly = true;
-    zipDropdown.innerHTML = '<option value="" disabled>Select Zip code</option>'; // Reset to default option
+    zipDropdown.innerHTML =
+      '<option value="" disabled>Select Zip code</option>'; // Reset to default option
     zipText.value = "";
     countyInput.value = "";
 
