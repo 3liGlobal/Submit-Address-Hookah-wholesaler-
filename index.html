@@ -25,8 +25,7 @@
 		<form
 			action='https://forms.zohopublic.com/airglobal/form/SubmitAddressHookahwholesaler/formperma/ysph0y-C4sVB2Xyc78ft8DO3L_-1fA-DE-1nAsLsSd4/htmlRecords/submit'
 			name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
-			accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input
-				type="hidden" name="zf_referrer_name"
+			accept-charset='UTF-8' enctype='multipart/form-data' id='form'><input type="hidden" name="zf_referrer_name"
 				value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
 			<input type="hidden" name="zf_redirect_url"
 				value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
@@ -243,33 +242,37 @@
 		function searchDropdown() {
 
 			var country = $(".dropdown-countries").find(":selected").text();
-			var city = $(".Address_City").val();
-			var zipCode = $(".Address_ZipCode").val();
-			var inputLength = $("#searchInput").val().length;
-			if (inputLength > 0) {
-				const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=5&Text=${$(
-					"#searchInput"
-				).val()}`;
+			var country_val = $(".zf-form-sBox").find(":selected").val();
+			if (country_val == "USA") {
+				var city = $(".Address_City").val();
+				var zipCode = $(".Address_ZipCode").val();
+				var inputLength = $("#searchInput").val().length;
+				if (inputLength > 0) {
+					const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=5&Text=${$(
+						"#searchInput"
+					).val()}`;
 
-				// Call the API to get data based on the search query
-				fetchData(query, (data) => {
-					const filteredOptions = data.Items;
-					dropdownList.empty();
-					filteredOptions.forEach((option) => {
-						if (option.Type === "Container" || option.Type === "Street") {
-							dropdownList.append(
-								`<div class="dropdown-item"> ${option.Text} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`
-							);
-						} else {
-							dropdownList.append(
-								`<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text}</div>`
-							);
-						}
+					// Call the API to get data based on the search query
+					fetchData(query, (data) => {
+						const filteredOptions = data.Items;
+						dropdownList.empty();
+						filteredOptions.forEach((option) => {
+							if (option.Type === "Container" || option.Type === "Street") {
+								dropdownList.append(
+									`<div class="dropdown-item"> ${option.Text} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`
+								);
+							} else {
+								dropdownList.append(
+									`<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text}</div>`
+								);
+							}
+						});
 					});
-				});
-			} else {
-				dropdownList.empty();
+				} else {
+					dropdownList.empty();
+				}
 			}
+
 
 		}
 		function callback(e, thisObj) {
