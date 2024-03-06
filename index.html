@@ -242,7 +242,7 @@
 		function searchDropdown() {
 
 			var country = $(".dropdown-countries").find(":selected").text();
-			var country_val = $(".zf-form-sBox").find(":selected").val();
+			var country_val = $(".dropdown-countries").find(":selected").val();
 			if (country_val == "USA") {
 				var city = $(".Address_City").val();
 				var zipCode = $(".Address_ZipCode").val();
