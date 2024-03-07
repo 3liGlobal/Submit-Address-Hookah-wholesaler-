@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 	<style>
 		.state-dropdown,
 		.state-text,
@@ -110,20 +113,20 @@
 												<option value="" selected="selected" disabled>Select Country</option>
 
 											</select>
-										</span>
-										<span class="zf-flLeft zf-addtwo">
-											<label>State/Region/Province
-												<em class="zf-important star">*</em>
-											</label>
-											<select class="Address_Region state-dropdown" name="Address_Region"
-												checktype="c1" placeholder="">
-												<option value="" selected="selected" disabled>Select State</option>
-											</select>
-											<input type="text" class="Address_Region state-text"
-												placeholder="Enter state">
 
-											<!-- <input type="text" maxlength="255" name="Address_Region" checktype="c1"
-												placeholder="" /> -->
+										</span>
+									</div>
+
+									<div class="name-item">
+
+										<span class="zf-flLeft zf-addtwo">
+											<label>Street Address
+												<em class="zf-important">*</em>
+											</label>
+											<input type="text" maxlength="255" name="Address_AddressLine1"
+												checktype="c1" placeholder="Street Address" class="street"
+												id="searchInput" oninput="searchDropdown()" />
+											<div class="dropdown-list"></div>
 										</span>
 									</div>
 
@@ -132,29 +135,38 @@
 											<label>City
 												<em class="zf-important">*</em>
 											</label>
-											<select class="Address_City city-dropdown" id="city" checktype="c1"
-												placeholder="" disabled>
-												<option value="" selected="selected">Select City</option>
-											</select>
 											<input type="text" class="Address_City city-text" name="Address_City"
 												maxlength="255" placeholder="" autocomplete="off" />
 
 										</span>
+
+										<span class="zf-flLeft zf-addtwo">
+											<label>State/Region/Province
+												<em class="zf-important star">*</em>
+											</label>
+											<select class="state-dropdown" checktype="c1" placeholder="">
+												<option value="" selected="selected" disabled>Select State</option>
+											</select>
+											<input type="text" class="Address_Region state-text" name="Address_Region"
+												placeholder="Enter State">
+
+											<!-- <input type="text" maxlength="255" name="Address_Region" checktype="c1"
+													placeholder="" /> -->
+										</span>
+										<span style="display: none;">
+											<label>State Label</label>
+											<input type="text" name="SingleLine2" id="stateLabel" checktype="c1"
+												value="" maxlength="255" fieldType=1 placeholder="" />
+										</span>
+
 										<span class="zf-flLeft zf-addtwo disabled">
 											<label>Postal / Zip Code
 												<em class="zf-important">*</em>
 											</label>
-											<select class="Address_ZipCode zip-dropdown" id="postalCode" checktype="c1"
-												placeholder="" disabled>
-												<option value="" selected="selected">Select Zip</option>
-											</select>
 											<input type="text" maxlength="255" placeholder="" name="Address_ZipCode"
 												id="postalCode" class="Address_ZipCode zip-text" autocomplete="off" />
 
 										</span>
-									</div>
-
-									<div class="name-item-2">
 										<span class="zf-addOne">
 											<label>County
 												<em class="zf-important">*</em>
@@ -164,6 +176,10 @@
 											<p id="SingleLine1_error" class="zf-errorMessage" style="display:none;">
 												Invalid value</p>
 										</span>
+									</div>
+
+									<div class="name-item">
+
 										<span class="zf-addOne">
 											<label>Suite/Unit/Apt. Number
 												<em class="zf-important">*</em>
@@ -181,20 +197,6 @@
 							</div>
 							<div class="zf-eclearBoth"></div>
 						</li><!---------Address Ends Here---------->
-
-						<!---------Street Starts Here---------->
-						<li class="zf-tempFrmWrapper zf-large">
-							<label class="zf-labelName">Street Address</label>
-							<div class="zf-tempContDiv">
-								<span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine1"
-										checktype="c1" placeholder="" class="street" id="searchInput"
-										oninput="searchDropdown()" />
-									<div class="dropdown-list"></div>
-								</span>
-								<p id="Dropdown_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
-							</div>
-							<div class="zf-clearBoth"></div>
-						</li><!---------Street Ends Here---------->
 
 						<!---------Licence Starts Here---------->
 						<li class="zf-tempFrmWrapper zf-large">
@@ -223,8 +225,8 @@
 		</form>
 	</div><!-- 'zf-templateWidth' ends -->
 	<script type="text/javascript">var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
-		// var zf_MandArray = ["Address_AddressLine1", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country"];
 		var zf_FieldArray = ["Email", "Dropdown", "Address_AddressLine1", "Address_AddressLine2", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country", "SingleLine1"]; // , "PhoneNumber_countrycode", "FileUpload"	
+		var zf_MandArray = ["Address_AddressLine1", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country"];
 		var isSalesIQIntegrationEnabled = false;
 		var salesIQFieldsArray = [];
 	</script>
@@ -240,7 +242,6 @@
 
 		// Function to handle the search input
 		function searchDropdown() {
-
 			var country = $(".dropdown-countries").find(":selected").text();
 			var country_val = $(".dropdown-countries").find(":selected").val();
 			if (country_val == "USA") {
@@ -306,12 +307,24 @@
 			fetchData(query, (data) => {
 				const filteredOptions = data.Items;
 				filteredOptions.forEach((option) => {
-					option.Line1 ? $(".street").val(option.Line1) : $(".street").val(option.City);
+					$(".street").val(option.Street)
+					$(".city-text").val(option.City)
+					$("#stateLabel").val(option.ProvinceName)
+					$(".state-dropdown").val(option.ProvinceCode).change();
+					$("#postalCode").val(option.PostalCode)
+					$("#county").val(option.AdminAreaName)
 					dropdownList.empty();
 				});
 			});
 		}
 
+		var iti = window.intlTelInput(document.querySelector("#international_PhoneNumber_countrycode"), {
+			separateDialCode: false,
+			preferredCountries: ["US"],
+			allowDropdown: true,
+			hiddenInput: "full",
+			utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+		});
 	</script>
 </body>
 

@@ -2181,7 +2181,7 @@ ul {
   .name-item,
   .city-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .name-item-2 {
     display: grid;
