@@ -1,7 +1,20 @@
 // $Id: $
 function zf_ValidateAndSubmit() {
   if (zf_CheckMandatory()) {
-    if (zf_ValidCheck()) {
+    const number = parseInt(document.getElementById("international_PhoneNumber_countrycode").value.trim());
+
+    const isValid = !isNaN(number) && number > 5 && number < 16;
+    const errorElement = document.getElementById("PhoneNumber_error");
+
+    if (isValid) {
+      errorElement.style.display = "none";
+    } else {
+      errorElement.textContent = "Business Phone Should be more than 5";
+      errorElement.style.display = "block";
+      return false;
+    }
+
+    if (zf_ValidCheck() && phoneFormat()) {
       if (isSalesIQIntegrationEnabled) {
         zf_addDataToSalesIQ();
       }
@@ -65,6 +78,7 @@ function zf_CheckMandatory() {
   return true;
 }
 function zf_ValidCheck() {
+  debugger
   var isValid = true;
   for (ind = 0; ind < zf_FieldArray.length; ind++) {
     var fieldObj = document.forms.form[zf_FieldArray[ind]];
@@ -343,38 +357,64 @@ function zf_FocusNext(elem, event) {
   }
 }
 
-function validate_Email() {
-  return new Promise(async function (myResolve, myReject) {
-    let email = $("#Email").val();
-    if (email) {
-      const apiUrl =
-        "https://middlewares.azurewebsites.net/api/EmailCheckerZoho?email=" +
-        email;
+function phoneNumberValidation() {
+  const phoneNumber = parseInt(
+    document
+      .getElementById("international_PhoneNumber_countrycode")
+      .value.trim()
+  );
 
-      // Make the API call using fetch
-      await fetch(apiUrl)
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Network response was not ok");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          if (!data.flag) {
-            document.getElementById("Email_error").innerText =
-              "Duplicate Email";
-            document.getElementById("Email_error").style.display = "block";
-            myResolve(false);
-          } else {
-            myResolve(true);
-          }
-        })
-        .catch((error) => {
-          // Handle any errors that occur during the fetch
-          console.error("There was a problem with the fetch operation:", error);
-        });
-    } else {
-		myResolve(false);
-    }
+  return new Promise(function (resolve) {
+    const isValidPhoneNumber = validatePhoneNumber(
+      phoneNumber,
+      "PhoneNumber_error",
+      "Business Phone Should be more than 5"
+    );
+
+    resolve(isValidPhoneNumber);
   });
+}
+
+function validatePhoneNumber(number, errorId, errorMessage) {
+  const isValid = !isNaN(number) && number > 5;
+  const errorElement = document.getElementById(errorId);
+
+  if (isValid) {
+    errorElement.style.display = "none";
+  } else {
+    errorElement.textContent = errorMessage;
+    errorElement.style.display = "block";
+  }
+
+  return isValid;
+}
+
+function phoneFormat() {
+  // Get the intlTelInput instances for phone number fields
+  var iti = window.intlTelInputGlobals.getInstance(
+    document.getElementById("international_PhoneNumber_countrycode")
+  );
+
+  // Get the values of phone numbers
+  const phoneNumber = document
+    .getElementById("international_PhoneNumber_countrycode")
+    .value.trim();
+
+  // Get the selected country codes
+  var countryCode = iti.getSelectedCountryData().iso2;
+
+  // Parse the phone numbers
+  const PhoneNumber = window.libphonenumber.PhoneNumberUtil.getInstance();
+  const number = PhoneNumber.parse(phoneNumber, countryCode);
+
+  // Validate the parsed phone numbers
+  if (!PhoneNumber.isValidNumber(number)) {
+    document.getElementById("PhoneNumber_error").textContent =
+      "Please insert the correct phone number";
+    document.getElementById("PhoneNumber_error").style.display = "block";
+    return false;
+  } else {
+    document.getElementById("PhoneNumber_error").style.display = "none";
+    return true;
+  }
 }
