@@ -2,8 +2,7 @@
 function zf_ValidateAndSubmit() {
   if (zf_CheckMandatory()) {
     const number = parseInt(document.getElementById("international_PhoneNumber_countrycode").value.trim());
-
-    const isValid = !isNaN(number) && number > 5 && number < 16;
+    const isValid = !isNaN(number) && number > 5;
     const errorElement = document.getElementById("PhoneNumber_error");
 
     if (isValid) {
