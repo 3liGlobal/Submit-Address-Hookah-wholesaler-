@@ -1,254 +1,254 @@
 var countries = {
-  // Aruba: "ABW",
-  // Afghanistan: "AFG",
-  // Angola: "AGO",
-  // Anguilla: "AIA",
-  // "Aland Islands !Åland Islands": "ALA",
-  // Albania: "ALB",
-  // Andorra: "AND",
-  // "Not Found": "ANT",
-  // "United Arab Emirates": "ARE",
-  // Argentina: "ARG",
-  // Armenia: "ARM",
-  // "American Samoa": "ASM",
-  // Antarctica: "ATA",
-  // "French Southern Territories": "ATF",
-  // "Antigua and Barbuda": "ATG",
-  // Australia: "AUS",
-  // Austria: "AUT",
-  // Azerbaijan: "AZE",
-  // Burundi: "BDI",
-  // Belgium: "BEL",
-  // Benin: "BEN",
-  // "Bonaire, Sint Eustatius and Saba": "BES",
-  // "Burkina Faso": "BFA",
-  // Bangladesh: "BGD",
-  // Bulgaria: "BGR",
-  // Bahrain: "BHR",
-  // Bahamas: "BHS",
-  // "Bosnia and Herzegovina": "BIH",
-  // "Saint Barthelemy !Saint Barthélemy": "BLM",
-  // Belarus: "BLR",
-  // Belize: "BLZ",
-  // Bermuda: "BMU",
-  // "Bolivia (Plurinational State of)": "BOL",
-  // Brazil: "BRA",
-  // Barbados: "BRB",
-  // "Brunei Darussalam": "BRN",
-  // Bhutan: "BTN",
-  // "Bouvet Island": "BVT",
-  // Botswana: "BWA",
-  // "Central African Republic": "CAF",
+  Aruba: "ABW",
+  Afghanistan: "AFG",
+  Angola: "AGO",
+  Anguilla: "AIA",
+  "Aland Islands !Åland Islands": "ALA",
+  Albania: "ALB",
+  Andorra: "AND",
+  "Not Found": "ANT",
+  "United Arab Emirates": "ARE",
+  Argentina: "ARG",
+  Armenia: "ARM",
+  "American Samoa": "ASM",
+  Antarctica: "ATA",
+  "French Southern Territories": "ATF",
+  "Antigua and Barbuda": "ATG",
+  Australia: "AUS",
+  Austria: "AUT",
+  Azerbaijan: "AZE",
+  Burundi: "BDI",
+  Belgium: "BEL",
+  Benin: "BEN",
+  "Bonaire, Sint Eustatius and Saba": "BES",
+  "Burkina Faso": "BFA",
+  Bangladesh: "BGD",
+  Bulgaria: "BGR",
+  Bahrain: "BHR",
+  Bahamas: "BHS",
+  "Bosnia and Herzegovina": "BIH",
+  "Saint Barthelemy !Saint Barthélemy": "BLM",
+  Belarus: "BLR",
+  Belize: "BLZ",
+  Bermuda: "BMU",
+  "Bolivia (Plurinational State of)": "BOL",
+  Brazil: "BRA",
+  Barbados: "BRB",
+  "Brunei Darussalam": "BRN",
+  Bhutan: "BTN",
+  "Bouvet Island": "BVT",
+  Botswana: "BWA",
+  "Central African Republic": "CAF",
   Canada: "CAN",
-  // "Cocos (Keeling) Islands": "CCK",
-  // Switzerland: "CHE",
-  // Chile: "CHL",
-  // China: "CHN",
-  // "Cote d'Ivoire !Côte d'Ivoire": "CIV",
-  // Cameroon: "CMR",
-  // "Congo (Democratic Republic of the)": "COD",
-  // Congo: "COG",
-  // "Cook Islands": "COK",
-  // Colombia: "COL",
-  // Comoros: "COM",
-  // "Cabo Verde": "CPV",
-  // "Costa Rica": "CRI",
-  // Cuba: "CUB",
-  // "Curacao !Curaçao": "CUW",
-  // "Christmas Island": "CXR",
-  // "Cayman Islands": "CYM",
-  // Cyprus: "CYP",
-  // "Czech Republic": "CZE",
-  // Germany: "DEU",
-  // Djibouti: "DJI",
-  // Dominica: "DMA",
-  // Denmark: "DNK",
-  // "Dominican Republic": "DOM",
-  // Algeria: "DZA",
-  // Ecuador: "ECU",
-  // Egypt: "EGY",
-  // Eritrea: "ERI",
-  // Spain: "ESP",
-  // Estonia: "EST",
-  // Ethiopia: "ETH",
-  // Finland: "FIN",
-  // Fiji: "FJI",
-  // "Falkland Islands (Malvinas)": "FLK",
-  // France: "FRA",
-  // "Faroe Islands": "FRO",
-  // "Micronesia (Federated States of)": "FSM",
-  // Gabon: "GAB",
-  // "United Kingdom of Great Britain and Northern Ireland": "GBR",
-  // Georgia: "GEO",
-  // Guernsey: "GGY",
-  // Ghana: "GHA",
-  // Gibraltar: "GIB",
-  // Guinea: "GIN",
-  // Guadeloupe: "GLP",
-  // Gambia: "GMB",
-  // "Guinea-Bissau": "GNB",
-  // "Equatorial Guinea": "GNQ",
-  // Greece: "GRC",
-  // Grenada: "GRD",
-  // Greenland: "GRL",
-  // Guatemala: "GTM",
-  // "French Guiana": "GUF",
-  // Guam: "GUM",
-  // Guyana: "GUY",
-  // "Hong Kong": "HKG",
-  // "Heard Island and McDonald Islands": "HMD",
-  // Honduras: "HND",
-  // Croatia: "HRV",
-  // Haiti: "HTI",
-  // Hungary: "HUN",
-  // Indonesia: "IDN",
-  // "Isle of Man": "IMN",
-  // India: "IND",
-  // "British Indian Ocean Territory": "IOT",
-  // Ireland: "IRL",
-  // "Iran (Islamic Republic of)": "IRN",
-  // Iraq: "IRQ",
-  // Iceland: "ISL",
-  // Israel: "ISR",
-  // Italy: "ITA",
-  // Jamaica: "JAM",
-  // Jersey: "JEY",
-  // Jordan: "JOR",
+  "Cocos (Keeling) Islands": "CCK",
+  Switzerland: "CHE",
+  Chile: "CHL",
+  China: "CHN",
+  "Cote d'Ivoire !Côte d'Ivoire": "CIV",
+  Cameroon: "CMR",
+  "Congo (Democratic Republic of the)": "COD",
+  Congo: "COG",
+  "Cook Islands": "COK",
+  Colombia: "COL",
+  Comoros: "COM",
+  "Cabo Verde": "CPV",
+  "Costa Rica": "CRI",
+  Cuba: "CUB",
+  "Curacao !Curaçao": "CUW",
+  "Christmas Island": "CXR",
+  "Cayman Islands": "CYM",
+  Cyprus: "CYP",
+  "Czech Republic": "CZE",
+  Germany: "DEU",
+  Djibouti: "DJI",
+  Dominica: "DMA",
+  Denmark: "DNK",
+  "Dominican Republic": "DOM",
+  Algeria: "DZA",
+  Ecuador: "ECU",
+  Egypt: "EGY",
+  Eritrea: "ERI",
+  Spain: "ESP",
+  Estonia: "EST",
+  Ethiopia: "ETH",
+  Finland: "FIN",
+  Fiji: "FJI",
+  "Falkland Islands (Malvinas)": "FLK",
+  France: "FRA",
+  "Faroe Islands": "FRO",
+  "Micronesia (Federated States of)": "FSM",
+  Gabon: "GAB",
+  "United Kingdom of Great Britain and Northern Ireland": "GBR",
+  Georgia: "GEO",
+  Guernsey: "GGY",
+  Ghana: "GHA",
+  Gibraltar: "GIB",
+  Guinea: "GIN",
+  Guadeloupe: "GLP",
+  Gambia: "GMB",
+  "Guinea-Bissau": "GNB",
+  "Equatorial Guinea": "GNQ",
+  Greece: "GRC",
+  Grenada: "GRD",
+  Greenland: "GRL",
+  Guatemala: "GTM",
+  "French Guiana": "GUF",
+  Guam: "GUM",
+  Guyana: "GUY",
+  "Hong Kong": "HKG",
+  "Heard Island and McDonald Islands": "HMD",
+  Honduras: "HND",
+  Croatia: "HRV",
+  Haiti: "HTI",
+  Hungary: "HUN",
+  Indonesia: "IDN",
+  "Isle of Man": "IMN",
+  India: "IND",
+  "British Indian Ocean Territory": "IOT",
+  Ireland: "IRL",
+  "Iran (Islamic Republic of)": "IRN",
+  Iraq: "IRQ",
+  Iceland: "ISL",
+  Israel: "ISR",
+  Italy: "ITA",
+  Jamaica: "JAM",
+  Jersey: "JEY",
+  Jordan: "JOR",
   Japan: "JPN",
-  // Kazakhstan: "KAZ",
-  // Kenya: "KEN",
-  // Kyrgyzstan: "KGZ",
-  // Cambodia: "KHM",
-  // Kiribati: "KIR",
-  // "Saint Kitts and Nevis": "KNA",
-  // "Korea (Republic of)": "KOR",
-  // Kuwait: "KWT",
-  // "Lao People's Democratic Republic": "LAO",
-  // Lebanon: "LBN",
-  // Liberia: "LBR",
-  // Libya: "LBY",
-  // "Saint Lucia": "LCA",
-  // Liechtenstein: "LIE",
-  // "Sri Lanka": "LKA",
-  // Lesotho: "LSO",
-  // Lithuania: "LTU",
-  // Luxembourg: "LUX",
-  // Latvia: "LVA",
-  // Macao: "MAC",
-  // "Saint Martin (French part)": "MAF",
-  // Morocco: "MAR",
-  // Monaco: "MCO",
-  // "Moldova (Republic of)": "MDA",
-  // Madagascar: "MDG",
-  // Maldives: "MDV",
-  // Mexico: "MEX",
-  // "Marshall Islands": "MHL",
-  // "Macedonia (the former Yugoslav Republic of)": "MKD",
-  // Mali: "MLI",
-  // Malta: "MLT",
-  // Myanmar: "MMR",
-  // Montenegro: "MNE",
-  // Mongolia: "MNG",
-  // "Northern Mariana Islands": "MNP",
-  // Mozambique: "MOZ",
-  // Mauritania: "MRT",
-  // Montserrat: "MSR",
-  // Martinique: "MTQ",
-  // Mauritius: "MUS",
-  // Malawi: "MWI",
-  // Malaysia: "MYS",
-  // Mayotte: "MYT",
-  // Namibia: "NAM",
-  // "New Caledonia": "NCL",
-  // Niger: "NER",
-  // "Norfolk Island": "NFK",
-  // Nigeria: "NGA",
-  // Nicaragua: "NIC",
-  // Niue: "NIU",
-  // Netherlands: "NLD",
-  // Norway: "NOR",
-  // Nepal: "NPL",
-  // Nauru: "NRU",
-  // "New Zealand": "NZL",
-  // Oman: "OMN",
-  // Pakistan: "PAK",
-  // Panama: "PAN",
-  // Pitcairn: "PCN",
-  // Peru: "PER",
-  // Philippines: "PHL",
-  // Palau: "PLW",
-  // "Papua New Guinea": "PNG",
-  // Poland: "POL",
-  // "Puerto Rico": "PRI",
-  // "Korea (Democratic People's Republic of)": "PRK",
-  // Portugal: "PRT",
-  // Paraguay: "PRY",
-  // "Palestine, State of": "PSE",
-  // "French Polynesia": "PYF",
-  // Qatar: "QAT",
-  // "Reunion !Réunion": "REU",
-  // Romania: "ROU",
-  // "Russian Federation": "RUS",
-  // Rwanda: "RWA",
-  // "Saudi Arabia": "SAU",
-  // Sudan: "SDN",
-  // Senegal: "SEN",
-  // Singapore: "SGP",
-  // "South Georgia and the South Sandwich Islands": "SGS",
-  // "Saint Helena, Ascension and Tristan da Cunha": "SHN",
-  // "Svalbard and Jan Mayen": "SJM",
-  // "Solomon Islands": "SLB",
-  // "Sierra Leone": "SLE",
-  // "El Salvador": "SLV",
-  // "San Marino": "SMR",
-  // Somalia: "SOM",
-  // "Saint Pierre and Miquelon": "SPM",
-  // Serbia: "SRB",
-  // "South Sudan": "SSD",
-  // "Sao Tome and Principe": "STP",
-  // Suriname: "SUR",
-  // Slovakia: "SVK",
-  // Slovenia: "SVN",
-  // Sweden: "SWE",
-  // Swaziland: "SWZ",
-  // "Sint Maarten (Dutch part)": "SXM",
-  // Seychelles: "SYC",
-  // "Syrian Arab Republic": "SYR",
-  // "Turks and Caicos Islands": "TCA",
-  // Chad: "TCD",
-  // Togo: "TGO",
-  // Thailand: "THA",
-  // Tajikistan: "TJK",
-  // Tokelau: "TKL",
-  // Turkmenistan: "TKM",
-  // "Timor-Leste": "TLS",
-  // Tonga: "TON",
-  // "Trinidad and Tobago": "TTO",
-  // Tunisia: "TUN",
-  // Turkey: "TUR",
-  // Tuvalu: "TUV",
-  // "Taiwan, Province of China[a]": "TWN",
-  // "Tanzania, United Republic of": "TZA",
-  // Uganda: "UGA",
-  // Ukraine: "UKR",
-  // "United States Minor Outlying Islands": "UMI",
-  // Uruguay: "URY",
+  Kazakhstan: "KAZ",
+  Kenya: "KEN",
+  Kyrgyzstan: "KGZ",
+  Cambodia: "KHM",
+  Kiribati: "KIR",
+  "Saint Kitts and Nevis": "KNA",
+  "Korea (Republic of)": "KOR",
+  Kuwait: "KWT",
+  "Lao People's Democratic Republic": "LAO",
+  Lebanon: "LBN",
+  Liberia: "LBR",
+  Libya: "LBY",
+  "Saint Lucia": "LCA",
+  Liechtenstein: "LIE",
+  "Sri Lanka": "LKA",
+  Lesotho: "LSO",
+  Lithuania: "LTU",
+  Luxembourg: "LUX",
+  Latvia: "LVA",
+  Macao: "MAC",
+  "Saint Martin (French part)": "MAF",
+  Morocco: "MAR",
+  Monaco: "MCO",
+  "Moldova (Republic of)": "MDA",
+  Madagascar: "MDG",
+  Maldives: "MDV",
+  Mexico: "MEX",
+  "Marshall Islands": "MHL",
+  "Macedonia (the former Yugoslav Republic of)": "MKD",
+  Mali: "MLI",
+  Malta: "MLT",
+  Myanmar: "MMR",
+  Montenegro: "MNE",
+  Mongolia: "MNG",
+  "Northern Mariana Islands": "MNP",
+  Mozambique: "MOZ",
+  Mauritania: "MRT",
+  Montserrat: "MSR",
+  Martinique: "MTQ",
+  Mauritius: "MUS",
+  Malawi: "MWI",
+  Malaysia: "MYS",
+  Mayotte: "MYT",
+  Namibia: "NAM",
+  "New Caledonia": "NCL",
+  Niger: "NER",
+  "Norfolk Island": "NFK",
+  Nigeria: "NGA",
+  Nicaragua: "NIC",
+  Niue: "NIU",
+  Netherlands: "NLD",
+  Norway: "NOR",
+  Nepal: "NPL",
+  Nauru: "NRU",
+  "New Zealand": "NZL",
+  Oman: "OMN",
+  Pakistan: "PAK",
+  Panama: "PAN",
+  Pitcairn: "PCN",
+  Peru: "PER",
+  Philippines: "PHL",
+  Palau: "PLW",
+  "Papua New Guinea": "PNG",
+  Poland: "POL",
+  "Puerto Rico": "PRI",
+  "Korea (Democratic People's Republic of)": "PRK",
+  Portugal: "PRT",
+  Paraguay: "PRY",
+  "Palestine, State of": "PSE",
+  "French Polynesia": "PYF",
+  Qatar: "QAT",
+  "Reunion !Réunion": "REU",
+  Romania: "ROU",
+  "Russian Federation": "RUS",
+  Rwanda: "RWA",
+  "Saudi Arabia": "SAU",
+  Sudan: "SDN",
+  Senegal: "SEN",
+  Singapore: "SGP",
+  "South Georgia and the South Sandwich Islands": "SGS",
+  "Saint Helena, Ascension and Tristan da Cunha": "SHN",
+  "Svalbard and Jan Mayen": "SJM",
+  "Solomon Islands": "SLB",
+  "Sierra Leone": "SLE",
+  "El Salvador": "SLV",
+  "San Marino": "SMR",
+  Somalia: "SOM",
+  "Saint Pierre and Miquelon": "SPM",
+  Serbia: "SRB",
+  "South Sudan": "SSD",
+  "Sao Tome and Principe": "STP",
+  Suriname: "SUR",
+  Slovakia: "SVK",
+  Slovenia: "SVN",
+  Sweden: "SWE",
+  Swaziland: "SWZ",
+  "Sint Maarten (Dutch part)": "SXM",
+  Seychelles: "SYC",
+  "Syrian Arab Republic": "SYR",
+  "Turks and Caicos Islands": "TCA",
+  Chad: "TCD",
+  Togo: "TGO",
+  Thailand: "THA",
+  Tajikistan: "TJK",
+  Tokelau: "TKL",
+  Turkmenistan: "TKM",
+  "Timor-Leste": "TLS",
+  Tonga: "TON",
+  "Trinidad and Tobago": "TTO",
+  Tunisia: "TUN",
+  Turkey: "TUR",
+  Tuvalu: "TUV",
+  "Taiwan, Province of China[a]": "TWN",
+  "Tanzania, United Republic of": "TZA",
+  Uganda: "UGA",
+  Ukraine: "UKR",
+  "United States Minor Outlying Islands": "UMI",
+  Uruguay: "URY",
   "United States of America": "USA",
-  // Uzbekistan: "UZB",
-  // "Holy See": "VAT",
-  // "Saint Vincent and the Grenadines": "VCT",
-  // "Venezuela (Bolivarian Republic of)": "VEN",
-  // "Virgin Islands (British)": "VGB",
-  // "Virgin Islands (U.S.)": "VIR",
-  // "Viet Nam": "VNM",
+  Uzbekistan: "UZB",
+  "Holy See": "VAT",
+  "Saint Vincent and the Grenadines": "VCT",
+  "Venezuela (Bolivarian Republic of)": "VEN",
+  "Virgin Islands (British)": "VGB",
+  "Virgin Islands (U.S.)": "VIR",
+  "Viet Nam": "VNM",
   Vanuatu: "VUT",
-  // "Wallis and Futuna": "WLF",
-  // Samoa: "WSM",
-  // Kosovo: "XKS",
-  // Yemen: "YEM",
-  // "South Africa": "ZAF",
-  // Zambia: "ZMB",
-  // Zimbabwe: "ZWE",
+  "Wallis and Futuna": "WLF",
+  Samoa: "WSM",
+  Kosovo: "XKS",
+  Yemen: "YEM",
+  "South Africa": "ZAF",
+  Zambia: "ZMB",
+  Zimbabwe: "ZWE",
 };
 
 var countryArray = Object.entries(countries);
@@ -283,6 +283,12 @@ var States = {
     Arkansas: "AR",
     "American Samoa": "AS",
     Arizona: "AZ",
+    "Armed Forces Africa": "AE",
+    "Armed Forces Americas": "AA",
+    "Armed Forces Canada": "AE",
+    "Armed Forces Europe": "AE",
+    "Armed Forces Middle East": "AE",
+    "Armed Forces Pacific": "AP",
     California: "CA",
     Colorado: "CO",
     Connecticut: "CT",
@@ -152480,7 +152486,7 @@ window.onload = function () {
     zipText = document.querySelector(".zip-text"),
     //zipcodeInput = document.getElementById("postalCode");
     countyInput = document.getElementById("county"),
-  stateLabel = document.getElementById("stateLabel");
+    stateLabel = document.getElementById("stateLabel");
 
   // Populate country dropdown on page load
   for (var country in sortedCountries) {
@@ -152489,7 +152495,7 @@ window.onload = function () {
       sortedCountries[country]
     );
   }
-
+countySel.value="USA";
   // Handle change event on country dropdown
   countySel.onchange = function () {
     //cityDropdown.length = 1;
@@ -152566,146 +152572,146 @@ window.onload = function () {
     stateText.value = selectedState;
   };
 
-   function updateCityDropdown() {
-  //     const selectedCountry = countySel.value; // Replace with the actual reference to the country dropdown
-  //     const selectedState = document.querySelector(".state-dropdown").value;
-  //     stateText.value = selectedState;
-  //     const cityDropdown = document.querySelector(".city-dropdown");
-  //     const zipDropdown = document.querySelector(".zip-dropdown");
-  //     const countyInput = document.getElementById("county");
+  function updateCityDropdown() {
+    //     const selectedCountry = countySel.value; // Replace with the actual reference to the country dropdown
+    //     const selectedState = document.querySelector(".state-dropdown").value;
+    //     stateText.value = selectedState;
+    //     const cityDropdown = document.querySelector(".city-dropdown");
+    //     const zipDropdown = document.querySelector(".zip-dropdown");
+    //     const countyInput = document.getElementById("county");
 
-  //     // Disable the city dropdown and zipcode input
-  //     cityDropdown.disabled = true;
-  //     zipDropdown.disabled = true;
-  //     countyInput.readOnly = true;
+    //     // Disable the city dropdown and zipcode input
+    //     cityDropdown.disabled = true;
+    //     zipDropdown.disabled = true;
+    //     countyInput.readOnly = true;
 
-  //     // Clear existing options
-  //     cityDropdown.innerHTML = '<option value="">Select City</option>'; // Reset to default option
-  //     zipDropdown.innerHTML = '<option value="">Select Zip code</option>'; // Reset to default option
-  stateLabel.value = "";
-  //     cityText.value = "";
-  //     zipText.value = "";
-  //     countyInput.value = "";
+    //     // Clear existing options
+    //     cityDropdown.innerHTML = '<option value="">Select City</option>'; // Reset to default option
+    //     zipDropdown.innerHTML = '<option value="">Select Zip code</option>'; // Reset to default option
+    stateLabel.value = "";
+    //     cityText.value = "";
+    //     zipText.value = "";
+    //     countyInput.value = "";
 
-  if (countySel.value == "USA") {
-    stateLabel.value = stateDropdown.selectedOptions[0].innerHTML;
-  }
-  //     // If a country is selected, proceed to update the city dropdown
-  //     if (selectedCountry) {
-  //       // Enable the city dropdown
-  //       cityDropdown.disabled = false;
-
-  //       // If a state is selected, proceed to update the city dropdown
-  //       if (selectedState) {
-  //         //console.log(selectedState);
-  //         // Use a Set to keep track of unique cities
-  //         const uniqueCities = new Set();
-
-  //         // Filter cities based on the selected state and add to the Set
-  //         zip_city_state
-  //           .filter((entry) => entry.STATE === selectedState)
-  //           .forEach((entry) => uniqueCities.add(entry.CITY));
-
-  //         // Convert the Set to an array, sort alphabetically, and add new options to the city dropdown
-  //         const sortedCities = Array.from(uniqueCities).sort();
-  //         sortedCities.forEach((city) => {
-  //           const option = document.createElement("option");
-  //           option.value = city;
-  //           option.text = city;
-  //           cityDropdown.add(option);
-  //         });
-  //       }
-  //     }
-  //   }
-
-  //   cityDropdown.onchange = function () {
-  //     updateZipCodeDropdown();
-  //   };
-
-  //   function updateZipCodeDropdown() {
-  //     const selectedCountry = countySel.value; // Replace with the actual reference to the country dropdown
-  //     const selectedState = stateDropdown.value;
-  //     const cityDropdown = document.querySelector(".city-dropdown").value;
-  //     cityText.value = cityDropdown;
-  //     const zipDropdown = document.querySelector(".zip-dropdown");
-  //     const countyInput = document.getElementById("county");
-
-  //     zipDropdown.disabled = true;
-  //     countyInput.readOnly = true;
-  //     zipDropdown.innerHTML = '<option value="" disabled>Select Zip code</option>'; // Reset to default option
-  //     zipText.value = "";
-  //     countyInput.value = "";
-
-  //     if (selectedCountry && selectedState && cityDropdown) {
-  //       const uniqueZipCode = new Set();
-
-  //       // Filter cities based on the selected state and add to the Set
-  //       zip_city_state
-  //         .filter(
-  //           (entry) =>
-  //             entry.STATE === selectedState && entry.CITY === cityDropdown
-  //         )
-  //         .forEach((entry) => uniqueZipCode.add(entry.ZIPCODE));
-
-  //       zipDropdown.style.display = "block";
-  //       zipText.style.display = "none";
-  //       zipDropdown.innerHTML = '<option value="">Select Zip Code</option>';
-  //       zipDropdown.disabled = false;
-  //       const sortedZipCode = Array.from(uniqueZipCode).sort();
-  //       sortedZipCode.forEach((zipcode) => {
-  //         const option = document.createElement("option");
-  //         option.value = zipcode;
-  //         option.text = zipcode;
-  //         zipDropdown.add(option);
-  //       });
-  //       if (uniqueZipCode.size === 1) {
-  //         zipDropdown.options[1].selected = true;
-  //         zipDropdown.disabled = true;
-
-  //         let selectedCity = document.querySelector(".city-dropdown").value;
-
-  //         const selectedEntry = zip_city_state.find(
-  //           (entry) =>
-  //             entry.STATE === document.querySelector(".state-dropdown").value &&
-  //             entry.CITY === selectedCity
-  //         );
-
-  //         if (selectedEntry && selectedEntry.ZIPCODE) {
-  //           zipText.value = selectedEntry.ZIPCODE;
-  //           countyInput.value = selectedEntry.COUNTY;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   zipDropdown.onchange = function () {
-  //     zipCodeDropdownChangeHandler();
-  //   };
-
-  //   function zipCodeDropdownChangeHandler() {
-  //     const selectedZipCode = document.querySelector(".zip-dropdown").value;
-
-  //     const uniqueZipCode = new Set();
-  //     const sortedZipCode = Array.from(uniqueZipCode).sort();
-  //     sortedZipCode.forEach((zipcode) => {
-  //       const option = document.createElement("option");
-  //       option.value = zipcode;
-  //       option.text = zipcode;
-  //       zipDropdown.add(option);
-  //     });
-
-  //     const selectedEntry = zip_city_state.find(
-  //       (entry) =>
-  //         entry.STATE === document.querySelector(".state-dropdown").value &&
-  //         entry.CITY === document.querySelector(".city-dropdown").value &&
-  //         entry.ZIPCODE === selectedZipCode
-  //     );
-
-  //     if (selectedEntry && selectedEntry.ZIPCODE) {
-  //       zipText.value = selectedZipCode;
-  //       countyInput.value = selectedEntry.COUNTY;
-  //     }
+    if (countySel.value == "USA") {
+      stateLabel.value = stateDropdown.selectedOptions[0].innerHTML;
     }
+    //     // If a country is selected, proceed to update the city dropdown
+    //     if (selectedCountry) {
+    //       // Enable the city dropdown
+    //       cityDropdown.disabled = false;
+
+    //       // If a state is selected, proceed to update the city dropdown
+    //       if (selectedState) {
+    //         //console.log(selectedState);
+    //         // Use a Set to keep track of unique cities
+    //         const uniqueCities = new Set();
+
+    //         // Filter cities based on the selected state and add to the Set
+    //         zip_city_state
+    //           .filter((entry) => entry.STATE === selectedState)
+    //           .forEach((entry) => uniqueCities.add(entry.CITY));
+
+    //         // Convert the Set to an array, sort alphabetically, and add new options to the city dropdown
+    //         const sortedCities = Array.from(uniqueCities).sort();
+    //         sortedCities.forEach((city) => {
+    //           const option = document.createElement("option");
+    //           option.value = city;
+    //           option.text = city;
+    //           cityDropdown.add(option);
+    //         });
+    //       }
+    //     }
+    //   }
+
+    //   cityDropdown.onchange = function () {
+    //     updateZipCodeDropdown();
+    //   };
+
+    //   function updateZipCodeDropdown() {
+    //     const selectedCountry = countySel.value; // Replace with the actual reference to the country dropdown
+    //     const selectedState = stateDropdown.value;
+    //     const cityDropdown = document.querySelector(".city-dropdown").value;
+    //     cityText.value = cityDropdown;
+    //     const zipDropdown = document.querySelector(".zip-dropdown");
+    //     const countyInput = document.getElementById("county");
+
+    //     zipDropdown.disabled = true;
+    //     countyInput.readOnly = true;
+    //     zipDropdown.innerHTML = '<option value="" disabled>Select Zip code</option>'; // Reset to default option
+    //     zipText.value = "";
+    //     countyInput.value = "";
+
+    //     if (selectedCountry && selectedState && cityDropdown) {
+    //       const uniqueZipCode = new Set();
+
+    //       // Filter cities based on the selected state and add to the Set
+    //       zip_city_state
+    //         .filter(
+    //           (entry) =>
+    //             entry.STATE === selectedState && entry.CITY === cityDropdown
+    //         )
+    //         .forEach((entry) => uniqueZipCode.add(entry.ZIPCODE));
+
+    //       zipDropdown.style.display = "block";
+    //       zipText.style.display = "none";
+    //       zipDropdown.innerHTML = '<option value="">Select Zip Code</option>';
+    //       zipDropdown.disabled = false;
+    //       const sortedZipCode = Array.from(uniqueZipCode).sort();
+    //       sortedZipCode.forEach((zipcode) => {
+    //         const option = document.createElement("option");
+    //         option.value = zipcode;
+    //         option.text = zipcode;
+    //         zipDropdown.add(option);
+    //       });
+    //       if (uniqueZipCode.size === 1) {
+    //         zipDropdown.options[1].selected = true;
+    //         zipDropdown.disabled = true;
+
+    //         let selectedCity = document.querySelector(".city-dropdown").value;
+
+    //         const selectedEntry = zip_city_state.find(
+    //           (entry) =>
+    //             entry.STATE === document.querySelector(".state-dropdown").value &&
+    //             entry.CITY === selectedCity
+    //         );
+
+    //         if (selectedEntry && selectedEntry.ZIPCODE) {
+    //           zipText.value = selectedEntry.ZIPCODE;
+    //           countyInput.value = selectedEntry.COUNTY;
+    //         }
+    //       }
+    //     }
+    //   }
+
+    //   zipDropdown.onchange = function () {
+    //     zipCodeDropdownChangeHandler();
+    //   };
+
+    //   function zipCodeDropdownChangeHandler() {
+    //     const selectedZipCode = document.querySelector(".zip-dropdown").value;
+
+    //     const uniqueZipCode = new Set();
+    //     const sortedZipCode = Array.from(uniqueZipCode).sort();
+    //     sortedZipCode.forEach((zipcode) => {
+    //       const option = document.createElement("option");
+    //       option.value = zipcode;
+    //       option.text = zipcode;
+    //       zipDropdown.add(option);
+    //     });
+
+    //     const selectedEntry = zip_city_state.find(
+    //       (entry) =>
+    //         entry.STATE === document.querySelector(".state-dropdown").value &&
+    //         entry.CITY === document.querySelector(".city-dropdown").value &&
+    //         entry.ZIPCODE === selectedZipCode
+    //     );
+
+    //     if (selectedEntry && selectedEntry.ZIPCODE) {
+    //       zipText.value = selectedZipCode;
+    //       countyInput.value = selectedEntry.COUNTY;
+    //     }
+  }
 
   // function updateArray() {
   //   setTimeout(function () {
