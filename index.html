@@ -76,7 +76,7 @@
 										maxlength="20" checktype="c7" value="" phoneFormat="1"
 										isCountryCodeEnabled=false fieldType="11"
 										id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1"
-										placeholder="" oninput="this.value = this.value.replace(/[^0-9]/g, '')"/>
+										placeholder="" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
 								</span>
 								<p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">Invalid value
 								</p>
@@ -317,6 +317,12 @@
 				event.preventDefault(); // Prevent form from being submitted through enter key
 				zf_ValidateAndSubmit();
 			}
+		});
+	</script>
+	<script>
+		window.addEventListener('message', function (event) {
+			var email = event.data;
+			document.getElementById('Email').value = email;
 		});
 	</script>
 </body>
