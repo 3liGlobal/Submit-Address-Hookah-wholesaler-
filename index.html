@@ -52,18 +52,21 @@
 				<div class="zf-subContWrap zf-topAlign">
 					<ul>
 						<!---------Email Starts Here---------->
-						<li class="zf-tempFrmWrapper zf-small">
-							<label class="zf-labelName">
+						<li class="zf-tempFrmWrapper zf-large col2"><label class="zf-labelName">
 								Email
 								<em class="zf-important">*</em>
 							</label>
 							<div class="zf-tempContDiv">
-								<span> <input fieldType=9 type="text" maxlength="255" name="Email" checktype="c5"
-										value="" placeholder="" id="Email" /></span>
-								<p id="Email_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
+								<span id="loaderContainer"> <input fieldType=9 type="text" maxlength="255" name="Email"
+										checktype="c5" value="" placeholder="" id="Email" />
+									<div id="loader"></div>
+								</span>
+								<p id="Email_error" class="zf-errorMessage" style="display:none;">Please complete
+									this required field.</p>
 							</div>
 							<div class="zf-clearBoth"></div>
-						</li><!---------Email Ends Here---------->
+						</li>
+						<!---------Email Ends Here---------->
 
 						<!--address-->
 
@@ -203,7 +206,7 @@
 
 				</div><!---------template Container Starts Here---------->
 				<ul>
-					<li class="zf-fmFooter"><button class="zf-submitColor">Submit</button>
+					<li class="zf-fmFooter"><button class="zf-submitColor" id="zf-submitColor">Submit</button>
 					</li>
 				</ul>
 
@@ -262,7 +265,7 @@
 				dropdownList.empty();
 			}
 		}
-		
+
 		function callback(e, thisObj) {
 			let id = thisObj.id;
 			const query = `https://api.addressy.com/Capture/Interactive/Find/v1.10/json3.ws?Key=TY78-BD75-NW81-XE97&Countries=US&Limit=20&Container=${id}`;
@@ -336,6 +339,31 @@
 			document.getElementById('Email').value = email;
 		});
 	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		window.addEventListener('message', function (event) {
+			var email = event.data;
+			document.getElementById('Email').value = email;
+			document.getElementById("Email").readOnly = true;
+			let checkField = setInterval(function () {
+				if ($('#Email').val() !== '') {
+					$('#loader').hide();
+					clearInterval(checkField);
+				}
+			}, 100);
+			$('#loader').hide();
+		});
+	</script>
+
+	<script>
+		$('form').submit(function () {
+			$('#zf-submitColor').prop('disabled', true);
+			setTimeout(function () {
+				$('#zf-submitColor').prop('disabled', false);
+			}, 5000);
+		});
+	</script>
+
 </body>
 
 </html>
