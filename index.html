@@ -1,5 +1,5 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -248,11 +248,11 @@
 						filteredOptions.forEach((option) => {
 							if (option.Type === "Container" || option.Type === "Street" || option.Type === "Locality" || option.Type === "BuildingNumber") {
 								dropdownList.append(
-									`<div class="dropdown-item"> ${option.Text} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`
+									`<div class="dropdown-item"> ${option.Text} ${option.Description.includes("-") ? option.Description.substring(0, option.Description.lastIndexOf(" - ")) : option.Description} <span id="${option.Id}" onclick="callback(event, this);">see all ${option.Description}</span></div>`
 								);
 							} else {
 								dropdownList.append(
-									`<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text}</div>`
+									`<div class="dropdown-item" id="${option.Id}" onclick="getAddressDetail(event, this);"> ${option.Text} ${option.Description.includes("-") ? option.Description.substring(0, option.Description.lastIndexOf(" - ")) : option.Description}</div>`
 								);
 							}
 						});
