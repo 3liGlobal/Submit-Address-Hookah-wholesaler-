@@ -354,14 +354,30 @@
 		});
 	</script>
 
-	<script>
-		$('form').submit(function () {
-			$('#zf-submitColor').prop('disabled', true);
-			setTimeout(function () {
-				$('#zf-submitColor').prop('disabled', false);
-			}, 5000);
-		});
-	</script>
+<script>
+	$('form').submit(function () {
+		var submitButton = $('#zf-submitColor');
+		var submitHoverButton = $('#zf-submitColor:hover');
+
+		// Disable the button and change its color to grey
+		submitButton.css('cursor', 'not-allowed');
+		submitButton.html('Submitting...');
+		submitButton.css('background-color', '#d1d5db');
+		submitHoverButton.css('background-color', '#d1d5db');
+		submitButton.css('color', '#4b5563');
+		submitButton.prop('disabled', true);
+
+		// Re-enable the button and change its color back after 5 seconds
+		setTimeout(function () {
+			submitButton.prop('disabled', false);
+			submitButton.css('cursor', 'pointer'); // Reset to default color
+			submitButton.html('Submit');
+			submitButton.css('background-color', 'black');
+			submitButton.css('color', 'white');
+
+		}, 5000);
+	});
+</script>
 
 </body>
 
