@@ -77,7 +77,6 @@ function zf_CheckMandatory() {
   return true;
 }
 function zf_ValidCheck() {
-  debugger
   var isValid = true;
   for (ind = 0; ind < zf_FieldArray.length; ind++) {
     var fieldObj = document.forms.form[zf_FieldArray[ind]];
