@@ -8,7 +8,7 @@ function zf_ValidateAndSubmit() {
     if (isValid) {
       errorElement.style.display = "none";
     } else {
-      errorElement.textContent = "Business Phone Should be more than 5";
+      errorElement.textContent = "Please complete this required field.";
       errorElement.style.display = "block";
       return false;
     }
@@ -366,7 +366,7 @@ function phoneNumberValidation() {
     const isValidPhoneNumber = validatePhoneNumber(
       phoneNumber,
       "PhoneNumber_error",
-      "Business Phone Should be more than 5"
+      "Please complete this required field."
     );
 
     resolve(isValidPhoneNumber);

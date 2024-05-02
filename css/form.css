@@ -406,7 +406,6 @@ ul {
 .zf-address .zf-tempContDiv span,
 .zf-geolocation .zf-tempContDiv span {
   display: block;
-  padding-bottom: 15px;
   margin-right: 2%;
 }
 
@@ -419,7 +418,6 @@ ul {
 .zf-address .zf-tempContDiv .zf-addOne,
 .zf-geolocation .zf-tempContDiv .zf-addOne {
   float: none;
-  padding-bottom: 15px;
   margin-right: 0;
 }
 
@@ -1446,7 +1444,6 @@ ul {
 .zf-address .zf-tempContDiv span,
 .zf-geolocation .zf-tempContDiv span {
   display: block;
-  padding-bottom: 15px;
   /* margin-right: 2%; */
 }
 
@@ -1459,7 +1456,6 @@ ul {
 .zf-address .zf-tempContDiv .zf-addOne,
 .zf-geolocation .zf-tempContDiv .zf-addOne {
   float: none;
-  padding-bottom: 15px;
   margin-right: 0;
 }
 
