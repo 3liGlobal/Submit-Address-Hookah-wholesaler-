@@ -355,7 +355,8 @@ var original_zf_MandArray = [
   "Address_Region",
   "Address_ZipCode",
   "SingleLine1",
-  "Address_Country"
+  "Address_Country",
+  "Dropdown2",
 ];
 
 let zip_city_state = [
