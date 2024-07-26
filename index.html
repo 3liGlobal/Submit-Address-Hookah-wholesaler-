@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,7 +62,8 @@
 										checktype="c5" value="" placeholder="" id="Email" />
 									<div id="loader"></div>
 								</span>
-								<p id="Email_error" class="zf-errorMessage" style="display:none;">Please complete this required field.</p>
+								<p id="Email_error" class="zf-errorMessage" style="display:none;">Please complete this
+									required field.</p>
 							</div>
 							<div class="zf-clearBoth"></div>
 						</li>
@@ -80,7 +82,8 @@
 										id="international_PhoneNumber_countrycode" valType="number" phoneFormatType="1"
 										placeholder="" oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
 								</span>
-								<p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">Please complete this required field.
+								<p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">Please complete
+									this required field.
 								</p>
 							</div>
 							<div class="zf-clearBoth"></div>
@@ -315,7 +318,8 @@
 			});
 		}
 
-		var iti = window.intlTelInput(document.querySelector("#international_PhoneNumber_countrycode"), {
+		var input = document.querySelector("#international_PhoneNumber_countrycode");
+		var iti = window.intlTelInput(input, {
 			separateDialCode: false,
 			preferredCountries: ["US"],
 			allowDropdown: true,
@@ -329,6 +333,17 @@
 				zf_ValidateAndSubmit();
 			}
 		});
+
+		document.querySelector("#international_PhoneNumber_countrycode").addEventListener('countrychange', function () {
+			const convert_ISO_3166_2_to_1 = { 'AF': 'AFG', 'AX': 'ALA', 'AL': 'ALB', 'DZ': 'DZA', 'AS': 'ASM', 'AD': 'AND', 'AO': 'AGO', 'AI': 'AIA', 'AQ': 'ATA', 'AG': 'ATG', 'AR': 'ARG', 'AM': 'ARM', 'AW': 'ABW', 'AU': 'AUS', 'AT': 'AUT', 'AZ': 'AZE', 'BS': 'BHS', 'BH': 'BHR', 'BD': 'BGD', 'BB': 'BRB', 'BY': 'BLR', 'BE': 'BEL', 'BZ': 'BLZ', 'BJ': 'BEN', 'BM': 'BMU', 'BT': 'BTN', 'BO': 'BOL', 'BA': 'BIH', 'BW': 'BWA', 'BV': 'BVT', 'BR': 'BRA', 'IO': 'IOT', 'BN': 'BRN', 'BG': 'BGR', 'BF': 'BFA', 'BI': 'BDI', 'KH': 'KHM', 'CM': 'CMR', 'CA': 'CAN', 'CV': 'CPV', 'KY': 'CYM', 'CF': 'CAF', 'TD': 'TCD', 'CL': 'CHL', 'CN': 'CHN', 'CX': 'CXR', 'CC': 'CCK', 'CO': 'COL', 'KM': 'COM', 'CG': 'COG', 'CD': 'COD', 'CK': 'COK', 'CR': 'CRI', 'CI': 'CIV', 'HR': 'HRV', 'CU': 'CUB', 'CY': 'CYP', 'CZ': 'CZE', 'DK': 'DNK', 'DJ': 'DJI', 'DM': 'DMA', 'DO': 'DOM', 'EC': 'ECU', 'EG': 'EGY', 'SV': 'SLV', 'GQ': 'GNQ', 'ER': 'ERI', 'EE': 'EST', 'ET': 'ETH', 'FK': 'FLK', 'FO': 'FRO', 'FJ': 'FJI', 'FI': 'FIN', 'FR': 'FRA', 'GF': 'GUF', 'PF': 'PYF', 'TF': 'ATF', 'GA': 'GAB', 'GM': 'GMB', 'GE': 'GEO', 'DE': 'DEU', 'GH': 'GHA', 'GI': 'GIB', 'GR': 'GRC', 'GL': 'GRL', 'GD': 'GRD', 'GP': 'GLP', 'GU': 'GUM', 'GT': 'GTM', 'GG': 'GGY', 'GN': 'GIN', 'GW': 'GNB', 'GY': 'GUY', 'HT': 'HTI', 'HM': 'HMD', 'VA': 'VAT', 'HN': 'HND', 'HK': 'HKG', 'HU': 'HUN', 'IS': 'ISL', 'IN': 'IND', 'ID': 'IDN', 'IR': 'IRN', 'IQ': 'IRQ', 'IE': 'IRL', 'IM': 'IMN', 'IL': 'ISR', 'IT': 'ITA', 'JM': 'JAM', 'JP': 'JPN', 'JE': 'JEY', 'JO': 'JOR', 'KZ': 'KAZ', 'KE': 'KEN', 'KI': 'KIR', 'KP': 'PRK', 'KR': 'KOR', 'KW': 'KWT', 'KG': 'KGZ', 'LA': 'LAO', 'LV': 'LVA', 'LB': 'LBN', 'LS': 'LSO', 'LR': 'LBR', 'LY': 'LBY', 'LI': 'LIE', 'LT': 'LTU', 'LU': 'LUX', 'MO': 'MAC', 'MK': 'MKD', 'MG': 'MDG', 'MW': 'MWI', 'MY': 'MYS', 'MV': 'MDV', 'ML': 'MLI', 'MT': 'MLT', 'MH': 'MHL', 'MQ': 'MTQ', 'MR': 'MRT', 'MU': 'MUS', 'YT': 'MYT', 'MX': 'MEX', 'FM': 'FSM', 'MD': 'MDA', 'MC': 'MCO', 'MN': 'MNG', 'ME': 'MNE', 'MS': 'MSR', 'MA': 'MAR', 'MZ': 'MOZ', 'MM': 'MMR', 'NA': 'NAM', 'NR': 'NRU', 'NP': 'NPL', 'NL': 'NLD', 'AN': 'ANT', 'NC': 'NCL', 'NZ': 'NZL', 'NI': 'NIC', 'NE': 'NER', 'NG': 'NGA', 'NU': 'NIU', 'NF': 'NFK', 'MP': 'MNP', 'NO': 'NOR', 'OM': 'OMN', 'PK': 'PAK', 'PW': 'PLW', 'PS': 'PSE', 'PA': 'PAN', 'PG': 'PNG', 'PY': 'PRY', 'PE': 'PER', 'PH': 'PHL', 'PN': 'PCN', 'PL': 'POL', 'PT': 'PRT', 'PR': 'PRI', 'QA': 'QAT', 'RE': 'REU', 'RO': 'ROU', 'RU': 'RUS', 'RW': 'RWA', 'BL': 'BLM', 'SH': 'SHN', 'KN': 'KNA', 'LC': 'LCA', 'MF': 'MAF', 'PM': 'SPM', 'VC': 'VCT', 'WS': 'WSM', 'SM': 'SMR', 'ST': 'STP', 'SA': 'SAU', 'SN': 'SEN', 'RS': 'SRB', 'SC': 'SYC', 'SL': 'SLE', 'SG': 'SGP', 'SK': 'SVK', 'SI': 'SVN', 'SB': 'SLB', 'SO': 'SOM', 'ZA': 'ZAF', 'GS': 'SGS', 'ES': 'ESP', 'LK': 'LKA', 'SD': 'SDN', 'SR': 'SUR', 'SJ': 'SJM', 'SZ': 'SWZ', 'SE': 'SWE', 'CH': 'CHE', 'SY': 'SYR', 'TW': 'TWN', 'TJ': 'TJK', 'TZ': 'TZA', 'TH': 'THA', 'TL': 'TLS', 'TG': 'TGO', 'TK': 'TKL', 'TO': 'TON', 'TT': 'TTO', 'TN': 'TUN', 'TR': 'TUR', 'TM': 'TKM', 'TC': 'TCA', 'TV': 'TUV', 'UG': 'UGA', 'UA': 'UKR', 'AE': 'ARE', 'GB': 'GBR', 'US': 'USA', 'UM': 'UMI', 'UY': 'URY', 'UZ': 'UZB', 'VU': 'VUT', 'VE': 'VEN', 'VN': 'VNM', 'VG': 'VGB', 'VI': 'VIR', 'WF': 'WLF', 'EH': 'ESH', 'YE': 'YEM', 'ZM': 'ZMB', 'ZW': 'ZWE' }
+			var countySel = document.querySelector(".dropdown-countries");
+			var countryData = iti.getSelectedCountryData();
+			var countryName = countryData.name;
+			var iso2 = countryData.iso2.toUpperCase();
+			var iso3 = convert_ISO_3166_2_to_1[iso2] || "N/A";
+			countySel.value = iso3;
+		});
+
 	</script>
 
 	<script>
@@ -353,30 +368,30 @@
 		});
 	</script>
 
-<script>
-	$('form').submit(function () {
-		var submitButton = $('#zf-submitColor');
-		var submitHoverButton = $('#zf-submitColor:hover');
+	<script>
+		$('form').submit(function () {
+			var submitButton = $('#zf-submitColor');
+			var submitHoverButton = $('#zf-submitColor:hover');
 
-		// Disable the button and change its color to grey
-		submitButton.css('cursor', 'not-allowed');
-		// submitButton.html('Submitting...');
-		submitButton.css('background-color', '#d1d5db');
-		submitHoverButton.css('background-color', '#d1d5db');
-		submitButton.css('color', '#4b5563');
-		submitButton.prop('disabled', true);
+			// Disable the button and change its color to grey
+			submitButton.css('cursor', 'not-allowed');
+			// submitButton.html('Submitting...');
+			submitButton.css('background-color', '#d1d5db');
+			submitHoverButton.css('background-color', '#d1d5db');
+			submitButton.css('color', '#4b5563');
+			submitButton.prop('disabled', true);
 
-		// Re-enable the button and change its color back after 5 seconds
-		setTimeout(function () {
-			submitButton.prop('disabled', false);
-			submitButton.css('cursor', 'pointer'); // Reset to default color
-			// submitButton.html('Submit');
-			submitButton.css('background-color', 'black');
-			submitButton.css('color', 'white');
+			// Re-enable the button and change its color back after 5 seconds
+			setTimeout(function () {
+				submitButton.prop('disabled', false);
+				submitButton.css('cursor', 'pointer'); // Reset to default color
+				// submitButton.html('Submit');
+				submitButton.css('background-color', 'black');
+				submitButton.css('color', 'white');
 
-		}, 5000);
-	});
-</script>
+			}, 5000);
+		});
+	</script>
 
 </body>
 
