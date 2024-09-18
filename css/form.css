@@ -2344,7 +2344,7 @@ p {
 }
 
 #progressbar .active {
-  color: #961e70;
+  color: #52519e;
 }
 
 #progressbar li {
@@ -2410,7 +2410,7 @@ p {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: #961e70;
+  background: #52519e;
 }
 
 .progress {
