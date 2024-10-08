@@ -604,12 +604,9 @@
     }
 
     var input = document.querySelector("#international_PhoneNumber_countrycode");
-
-    // Event listener to ensure the "+" is always there
     input.addEventListener("input", function () {
-      // If "+" is removed, add it back
       if (!input.value.startsWith("+")) {
-        input.value = "+" + input.value.replace(/[^0-9]/g, ''); // Only allow digits after "+"
+        input.value = "+" + input.value.replace(/[^0-9]/g, '');
       }
     });
 
